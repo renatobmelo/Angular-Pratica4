@@ -1,1 +1,22 @@
-<p>listagem-jogadores works!</p>
+<div>
+  <mat-icon [matBadge]="jogadores.length" matBadgeColor="primary">people</mat-icon>
+</div>
+<div fxLayout="row wrap" fxLayout.lt-sm="column">
+  <mat-card fxFlex="20" class="card-jogador" *ngFor="let jogador of jogadores">
+    <mat-card-header>
+      <mat-card-title>{{jogador.nome | titlecase}}</mat-card-title>
+      <mat-card-subtitle>numero: #{{jogador.numero}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      Defende a seleção do país: {{jogador.pais}}.
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/editajogador', jogador.numero]">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-button (click)="excluir(jogador)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

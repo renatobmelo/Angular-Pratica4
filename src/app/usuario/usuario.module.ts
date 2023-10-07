@@ -18,7 +18,9 @@ import {RouterLink} from '@angular/router';
 @NgModule({
   declarations: [
     ListagemUsuariosComponent,
-    MantemUsuarioComponent
+    MantemUsuarioComponent,
+    
+
   ],
   imports: [
     CommonModule,
