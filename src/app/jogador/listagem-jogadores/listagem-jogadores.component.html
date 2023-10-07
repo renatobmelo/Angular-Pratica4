@@ -11,7 +11,7 @@
       Defende a seleção do país: {{jogador.pais}}.
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button [routerLink]="['/editajogador', jogador.numero]">
+      <button mat-button [routerLink]="['/editajogador', jogador.nome]">
         <mat-icon>edit</mat-icon>
       </button>
       <button mat-button (click)="excluir(jogador)">

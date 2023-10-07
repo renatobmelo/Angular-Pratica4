@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: 'editajogador/:id',
-    component: MantemUsuarioComponent
+    component: MantemJogadorComponent
   },
   {
     path: 'listagemjogadores',
